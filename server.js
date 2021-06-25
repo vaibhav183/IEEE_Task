@@ -76,15 +76,15 @@ app.post("/signupres", function(req, res) {
             //     resultvalue = "This username already exist!!";
             //     res.render("signup", { resv: resultvalue });
             // } else {
-            //     const newEntry = new IEEE_COLLECTION({
-            //         name: req.body.name1,
-            //         username: req.body.user,
-            //         password: req.body.pass1
-            //     });
-            //     newEntry.save(function(err, doc) {
-            //         if (err) return console.error(err);
-            //         console.log("Document inserted succussfully!");
-            //     });
+            const newEntry = new IEEE_COLLECTION({
+                name: req.body.name1,
+                username: req.body.user,
+                password: req.body.pass1
+            });
+            newEntry.save(function(err, doc) {
+                if (err) return console.error(err);
+                console.log("Document inserted succussfully!");
+            });
             res.render("welcome", { name_value: req.body.name1, username: req.body.user });
             // }
         } else {
