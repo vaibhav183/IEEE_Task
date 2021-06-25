@@ -90,7 +90,8 @@
      width: 30%;
      height: 2.3rem;
      margin-top: 6%;
-     margin-left: 15%;
+     text-align: center;
+     margin-left: 30%;
      margin-right: auto;
      border-radius: 6px;
      border-style: outset;
@@ -101,7 +102,7 @@
  #button-2 {
      width: 30%;
      height: 2.3rem;
-     margin-top: 6%;
+     margin-bottom: 0.2em;
      margin-left: 5%;
      margin-right: auto;
      border-radius: 6px;

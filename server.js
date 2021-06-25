@@ -63,30 +63,30 @@ app.post("/signupres", function(req, res) {
         if (req.body.pass1 === req.body.pass2) {
             let wes = false;
             let ss = req.body.user;
-            IEEE_COLLECTION.find(function(err, docs) {
-                if (err) return console.log(err);
-                docs.forEach(items => {
-                    if (items.username === req.body.user) {
-                        wes = true;
-                    }
-                });
-            });
+            // IEEE_COLLECTION.find(function(err, docs) {
+            //     if (err) return console.log(err);
+            //     docs.forEach(items => {
+            //         if (items.username === req.body.user) {
+            //             wes = true;
+            //         }
+            //     });
+            // });
 
-            if (wes === true) {
-                resultvalue = "This username already exist!!";
-                res.render("signup", { resv: resultvalue });
-            } else {
-                const newEntry = new IEEE_COLLECTION({
-                    name: req.body.name1,
-                    username: req.body.user,
-                    password: req.body.pass1
-                });
-                newEntry.save(function(err, doc) {
-                    if (err) return console.error(err);
-                    console.log("Document inserted succussfully!");
-                });
-                res.render("welcome", { name_value: req.body.name1, username: req.body.user });
-            }
+            // if (wes === true) {
+            //     resultvalue = "This username already exist!!";
+            //     res.render("signup", { resv: resultvalue });
+            // } else {
+            //     const newEntry = new IEEE_COLLECTION({
+            //         name: req.body.name1,
+            //         username: req.body.user,
+            //         password: req.body.pass1
+            //     });
+            //     newEntry.save(function(err, doc) {
+            //         if (err) return console.error(err);
+            //         console.log("Document inserted succussfully!");
+            //     });
+            res.render("welcome", { name_value: req.body.name1, username: req.body.user });
+            // }
         } else {
             resultvalue = "Possword didn't match! Please try again";
             res.render("signup", { resv: resultvalue });
