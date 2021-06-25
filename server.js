@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser")
+const ejs = require("ejs");
 const app = express();
+app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.get("/", function(_req, _res) {
@@ -8,8 +10,7 @@ app.get("/", function(_req, _res) {
 
 });
 app.post("/", function(req, res) {
-    console.log(req.body);
-    res.send("<h1>Hello " + req.body.user + "<br>Your Password is " + req.body.pass + "</h1>");
+    res.render("welcome", { username: req.body.user });
 });
 app.get("/signupRequest", function(_req, res) {
     res.sendFile(__dirname + "/signup.html")
