@@ -16,7 +16,7 @@
  
  .column-1 {
      width: 50%;
-     height: 28.5em;
+     height: 29em;
  }
  
  .col-img {
@@ -42,7 +42,7 @@
  .column-2 {
      /* background-image: url("back13.jpg"); */
      width: 50%;
-     height: 28.5em;
+     height: 29em;
      border-radius: 1em;
  }
  
@@ -129,4 +129,3 @@
  textarea:focus {
      outline: none;
  }
- /* hello */

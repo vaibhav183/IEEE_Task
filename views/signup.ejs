@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_signup.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="image/Ieee_logo.png" width="10%" height="10%" style="display: inline-block;">
+        <div style="outline: none;border-radius: 0.4em;background-image: url('image/back20.jpg'); width: 40%;margin-right: auto;margin-left: auto;text-align: center;margin-top: 1.5rem;padding:1em;box-shadow: 1em 1em 1em rgb(31, 99, 29);">
+            <div width="20%" height="15%" style="text-align: center;">
+                <h3><b>Sign Up</b></h3>
+            </div>
+            <hr style="height:0.2em;border-radius: 0.2em;background-color: black;color: black;">
+            <form action="/signupres" method="post">
+                <p style="color: Red;font-family: 'Merriweather', serif">
+                    <%= resv %>
+                </p>
+                <div style="border-style: groove;border-radius: 0.4em;height: 2.2em;width: 65%;margin-left: auto ;margin-right: auto;text-align: left;margin-top: 0.5em;box-shadow: 0.3em 0.3em 0.3em grey;"><img src="image/name.png" width="12%" height="20rem" style="padding: 1px;"><input type="text" name="name1" placeholder="Name" autocomplete="off"></div>
+                <div style="border-style: groove;border-radius: 0.4em;height: 2.2em;width: 65%;margin-left: auto ;margin-right: auto;text-align: left;margin-top: 0.5em;box-shadow: 0.3em 0.3em 0.3em grey;"><img src="image/username.png" width="12%" height="20rem" style="padding: 1px;"><input type="text" name="user" placeholder="Username Or Email" autocomplete="off"></div>
+                <div style="border-style: groove;border-radius: 0.4em;height: 2.2em;width: 65%;margin-left: auto ;margin-right: auto;text-align: left;margin-top: 0.5em;box-shadow: 0.4em 0.4em 0.4em grey;"><img src="image/pass1.png" width="12%" height="20rem" style="padding: 1px;"><input id="pass-1" type="password" name="pass1" placeholder="Password" autocomplete="off"></div>
+                <div style="border-style: groove;border-radius: 0.4em;height: 2.2em;width: 65%;margin-left: auto ;margin-right: auto;text-align: left;margin-top: 0.5em;box-shadow: 0.4em 0.4em 0.4em grey;"><img src="image/pass2.png" width="12%" height="20rem" style="padding: 1px;"><input id="pass-2" type="password" name="pass2" placeholder="Retype Password" autocomplete="off"></div>
+                <button id="button-1" type="submit" class=" bg-primary">Submit</button>
+            </form>
+            <p style="color: white;"><b>You Can Sign Up With </b></p>
+            <div class="last-div" style="background-color: rgb(219,68,55);">Google</div>
+            <div class="last-div" style="background-color:rgb(66,133,244)">Facebook</div>
+            <div class="last-div" style="background-color:rgb(29 161 242)">Twitter</div>
+            <div class=" last-div " style="background-color:rgb(138, 58, 185)">Instagram</div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
+        </div>
+        <script>
+            function fun() {
+                var detail = document.getElementsByClassName("details");
+                datail.style.borderStyle = "none";
+            }
+        </script>
+</body>
+
+</html>
